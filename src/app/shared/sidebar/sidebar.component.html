@@ -1,0 +1,99 @@
+<!-- <p>
+  sidebar works!
+</p> -->
+
+ <div class="sidebar">
+  
+    <!-- <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="#services"><i class="fa fa-fw fa-wrench"></i> Services</a>
+    <a href="#clients"><i class="fa fa-fw fa-user"></i> Clients</a>
+    <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a> -->
+    <!-- <ul class="list-unstyled components">
+        <li *ngFor="let nav of navs">
+            <a *ngIf="nav.subNavs.length==0">
+              <img src ="{{nav.icon}}">
+              <span class="sidebar-text">{{nav.title}}</span>
+            </a>
+            <a *ngIf="nav.subNavs.length>0" class="dropdown-btn">
+              <img src="{{nav.icon}}" style="margin-right: 20px">
+              {{nav.title}}<i style="margin-left:70px" class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-container">
+                <ul >
+                    <li *ngFor="let subnav of nav.subNavs">
+                        <a> {{subnav.title}}</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+      </ul> -->
+      
+      <ul class="list-unstyled components">
+        <li>
+            <a routerLink="/admin/user" class="user-image">
+              <img src="./../../../assets/img/userW.png" >
+              <span class="sidebar-text">User</span>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/admin/coupan" class="coupan-image">
+              <img src="./../../../assets/img/coupon.png">
+              <span class="sidebar-text">Coupan</span>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/admin/register-shop" >
+              <img src="./../../../assets/img/register-shop-copy.png">
+              <span class="sidebar-text">Register Shop</span>
+            </a>
+        </li>
+       
+        <li >
+            <a routerLink="/admin/all-flayers" class="all-flyer-img dropdown-btn">
+              <img src="./../../../assets/img/all-flyer.png" style="margin-right: 5px">
+              <span class="sidebar-text">All Flyer<i style="margin-left:60px" class="fa fa-caret-down"></i></span>
+            </a>
+            <div class="dropdown-container">
+                <ul>
+                    <li>
+                        <a routerLink="/admin/all-flayers/groceries">Groceries</a>
+                    </li>
+                    <li>
+                        <a routerLink="/admin/all-flayers/home-garden">Home & Gardens</a>
+                    </li>
+                    <li>
+                        <a>Oil & Diesel</a>
+                    </li>
+                    <li>
+                        <a>Electronics</a>
+                    </li>
+                    <li>
+                        <a>Baby  & Kids</a>
+                    </li>
+                    <li>
+                        <a>Fashion</a>
+                    </li>
+                </ul>
+            </div> 
+        </li>
+        <li>
+            <a routerLink="/admin/add-flayer" class="add-image">
+              <img src="./../../../assets/img/add.png" >
+              <span class="sidebar-text">Add Flyers</span>
+            </a>
+        </li>
+            <!-- <a *ngIf="nav.subNavs.length>0" class="dropdown-btn">
+              <img src="{{nav.icon}}" style="margin-right: 20px">
+              {{nav.title}}<i style="margin-left:70px" class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-container">
+                <ul >
+                    <li *ngFor="let subnav of nav.subNavs">
+                        <a> {{subnav.title}}</a>
+                    </li>
+                </ul>
+            </div> -->
+        <!-- </li> -->
+      </ul>
+  </div>
+  

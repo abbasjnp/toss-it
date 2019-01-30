@@ -1,0 +1,69 @@
+<div class="header-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="content-tagName">Dashboard / <span class="content-tagName-2">Add Flyer</span></div>
+        <h4>Add Flyer</h4>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="main-content">
+  <section>
+    <h5>Add Flyer</h5>
+    <div class="divider"></div>
+    <div>
+      <div class="add-form">
+        <form [formGroup]="addFlyer">
+          <div class="container-fluid">
+            
+              <mat-form-field class="input-full-width">
+                <input matInput placeholder="Flayer Name" formControlName="flyerName" required>
+              </mat-form-field>
+            
+            <mat-form-field class="input-full-width">
+              <mat-select placeholder="Until Day" formControlName="untilDay">
+                <mat-option>None</mat-option>
+                <mat-option *ngFor="let day of days" [value]="day">{{day}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <div class="row">
+              <div class="col-md-6">
+                <mat-form-field class="input-full-width">
+                  <input type="date" matInput placeholder="Start Date" formControlName="startDate" required>
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="input-full-width">
+                  <input type="date" matInput placeholder="End Date" formControlName="endDate" required>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div>
+                  <img *ngFor='let url of urlsFlyer'  [src]="url" height="150" width="150"> <br/>    
+                  <input type='file' (change)="uploadFlyerImage($event)" multiple formControlName="uploadFlyerImage" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div>
+                  <img *ngFor='let url of urlsMatchUP'  [src]="url" height="150" width="150"> <br/>    
+                  <input type='file' (change)="uploadMatchupImage($event)" multiple formControlName="uploadMatchupImage" required>
+                </div>
+              </div>
+            </div>
+            
+           
+            <div class="btn-section">
+              <button class="btn" type="text" (click)="cancel()">Cancel</button>
+              <button class="btn add" [disabled]="!addFlyer.valid"  type="submit" (click)="onSubmit()">Add Shop</button>
+            </div>
+          </div>
+
+
+        </form>
+      </div>
+    </div>
+  </section>
+</div>

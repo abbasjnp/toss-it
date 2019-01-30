@@ -1,0 +1,52 @@
+<div class="header-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="content-tagName">Dashboard / Register Shop /<span class="content-tagName-2">Add New Shop</span></div>
+        <h4>Add New Shop</h4>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="main-content">
+  <section>
+    <h5>Add Shop Detail</h5>
+    <div class="divider"></div>
+    <div class="add-form">
+      <form [formGroup]="addShopForm" >
+        `<div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field class="input-full-width">
+                <input matInput placeholder="Shop Name" formControlName="shopName">
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field class="input-full-width">
+                <input matInput placeholder="Shop Member Name" formControlName="shopMemberName">
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field class="input-full-width">
+                <input matInput placeholder="Emaid Id" formControlName="email" required>
+                <mat-error *ngIf="addShopForm.invalid">{{getErrorMessage()}}</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field class="input-full-width">
+                <input matInput placeholder="Serach Zip Code..." formControlName="zipCode">
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="btn-section">
+            <button class="btn" type="text" (click)="goBack()">Cancel</button>
+            <button class="btn add" [disabled]="!addShopForm.valid" type="submit" (click)="onSubmit()">Add Shop</button>
+          </div>
+        </div>
+
+
+      </form>
+    </div>
+  </section>
+</div>

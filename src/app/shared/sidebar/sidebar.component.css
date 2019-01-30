@@ -1,0 +1,61 @@
+body {font-family: "Lato", sans-serif;}
+
+.sidebar {
+    height: 100%;
+    width: 227px;
+    position: fixed;
+    background-color: #152d3f;
+    overflow-x: hidden;
+    padding-top: 28px;
+    /* padding-left: 10px; */
+    margin-top: 62px;
+}
+
+.sidebar a {
+  padding: 9px 8px 10px 29px;
+  text-decoration: none;
+  font-size: 17px;  
+  color: #818181;
+  display: block;
+  cursor: pointer;
+  margin-top:0px;
+}
+
+
+.sidebar a:hover{
+    color:#00d23a;
+    background-color:#173246;
+    border-left:3px solid #00d23a; 
+    
+}
+a.user-image:hover img {
+    content: url(./../../../assets/img/user.png);
+  }
+  a.coupan-image:hover img {
+    content: url(./../../../assets/img/couponG.png);
+  }
+  a.all-flyer-img:hover img {
+    content: url(./../../../assets/img/all-flyerG.png);
+  }
+  a.add-image:hover img {
+    content: url(./../../../assets/img/addG.png);
+  }
+  
+ 
+
+.sidebar-text{
+    margin-left:20px
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+.dropdown-container{
+    margin-left: -30px;
+
+}
+.dropdown-container ul li a{
+    padding: 5px 8px 10px 16px;
+
+}

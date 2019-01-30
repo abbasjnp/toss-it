@@ -1,0 +1,5 @@
+<input #box (keyup.enter)="onKey(box.value)" (blur)="onKey(box.value);box.value=''">
+<button (click)="onKey(box.value)">add</button>
+<ul>
+  <li *ngFor="let t of values">{{t}}</li>
+</ul>

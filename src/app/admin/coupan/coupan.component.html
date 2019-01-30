@@ -1,0 +1,58 @@
+<div class="header-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="content-tagName">Dashboard / <span class="content-tagName-2">Coupan</span></div>
+        <h4>Coupan</h4>
+      </div>
+      <div class="col-md-8">
+        <ul class="text-right">
+          <li class="search-wrapper">
+            <input type="text" class="input-searchBy" placeholder="Search by store name..">
+            <img class="search-pic" src='./../../../assets/img/search.png'>
+          </li>
+          <li>
+            <button class="btn-search">Search</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="main-content">
+  <!-- <div class="container-fluid">
+    <div class="row">
+      <div class="col" style="width:20%" *ngFor="let coupan of coupans ">
+        <div><img src={{coupan.url}}> </div>
+        <div>Save {{coupan.savePercentage}}</div>
+        <div>{{coupan.coupanDetail}}</div>
+        <div>{{coupan.matchAt}}</div>
+     </div>   
+
+    </div>
+  </div> -->
+  <div class="coupan-row">
+    <div class="coupan-column" *ngFor="let coupan of coupans ">
+      <div id="coupan-card">
+        <img src={{coupan.url}} width="300px" height="200px">
+        <section>
+          <p>Save <span>{{coupan.savePercentage}}</span></p>
+          <div id="coupanDetail">{{coupan.coupanDetail}}</div>
+          <div id="matchAt">Matchup at<span> {{coupan.matchAt}}</span></div>
+        </section>
+      </div>
+    </div>
+    <!-- <div class="column">
+      <img src="img_forest.jpg" alt="Forest" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
+    </div>
+     <div class="column">
+      <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
+    </div>
+     <div class="column">
+      <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
+    </div> -->
+  </div>
+</div>

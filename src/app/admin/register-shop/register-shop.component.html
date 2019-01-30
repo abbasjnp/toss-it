@@ -1,0 +1,65 @@
+
+<div class="header-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="content-tagName">Dashboard / <span class="content-tagName-2">Register Shop</span></div>
+        <h4>Register Shop</h4>
+      </div>
+      <div class="col-md-8">
+        <ul class="text-right">
+           <li class="search-wrapper">
+             <input  type="text" class="input-searchBy" placeholder="Search by zip code..">  
+             <img class="search-pic" src='./../../../assets/img/search.png'>
+           </li>
+           <li>
+             <button class="btn-search">Search</button>
+           </li>
+           <li>
+            <button class="btn-add-new" (click)="addNewShop()"><img src="./../../../assets/img/add-new.png"  >Add New Shop</button>
+          </li>
+         </ul>            
+      </div>
+    </div>
+  </div>
+</div>
+<div class="main-content">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- Position Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> SHOP ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="location">
+          <th mat-header-cell *matHeaderCellDef> LOCATION(ZIP CODE) </th>
+          <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="shopName">
+          <th mat-header-cell *matHeaderCellDef> SHOP NAME </th>
+          <td mat-cell *matCellDef="let element"> {{element.shopName}} </td>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="shopMemberName">
+          <th mat-header-cell *matHeaderCellDef> SHOP MEMBER NAME </th>
+          <td mat-cell *matCellDef="let element"> {{element.shopMemberName}} </td>
+        </ng-container>
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> EMAIL ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+          </ng-container>
+         
+      
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+</div>
