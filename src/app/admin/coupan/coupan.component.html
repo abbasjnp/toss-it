@@ -32,8 +32,8 @@
     </div>
   </div> -->
   <div class="coupan-row">
-    <div class="coupan-column" *ngFor="let coupan of coupans ">
-      <div id="coupan-card">
+    <div class="coupan-column" *ngFor="let coupan of coupans" (click)="openDialog(coupan)">
+      <div id="coupan-card"  >
         <img src={{coupan.url}} width="300px" height="200px">
         <section>
           <p>Save <span>{{coupan.savePercentage}}</span></p>
@@ -42,17 +42,5 @@
         </section>
       </div>
     </div>
-    <!-- <div class="column">
-      <img src="img_forest.jpg" alt="Forest" style="width:100%">
-    </div>
-    <div class="column">
-      <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
-    </div>
-     <div class="column">
-      <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
-    </div>
-     <div class="column">
-      <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
-    </div> -->
   </div>
 </div>

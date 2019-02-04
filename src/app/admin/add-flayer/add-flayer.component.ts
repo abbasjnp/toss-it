@@ -40,8 +40,8 @@ export class AddFlayerComponent implements OnInit {
                   var reader = new FileReader();
   
                   reader.onload = (event) => {
-                    console.log(event.target.result);
-                     this.urlsFlyer.push(event.target.result); 
+                    console.log(event.target);
+                     this.urlsFlyer.push(event.target ); 
                   }
   
                   reader.readAsDataURL(event.target.files[i]);
@@ -55,8 +55,8 @@ export class AddFlayerComponent implements OnInit {
                   var reader = new FileReader();
   
                   reader.onload = (event) => {
-                    console.log(event.target.result);
-                     this.urlsMatchUP.push(event.target.result); 
+                    console.log(event.target);
+                     this.urlsMatchUP.push(event.target); 
                   }
   
                   reader.readAsDataURL(event.target.files[i]);

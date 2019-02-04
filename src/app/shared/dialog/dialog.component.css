@@ -1,0 +1,13 @@
+.dialog-title{background-image: linear-gradient(to bottom, #c6ff6b, #00d23a);padding: 12px 25px;
+}
+.dialog-title h6{font-size:18px; }
+.dialog-title span {float: right}
+.dialog-content{border:0.5px dashed #727272;margin:20px;padding-bottom: 50px;}
+.dialog-content .img-coupan{padding:10px;border:0.5px dashed #727272;margin:100px 20px}
+.dialog-content-right{padding-top:50px;padding-right:25px;padding-left:0px}
+    .dialog-date{padding-top: 14px;padding-bottom: 23px;font-size: 15px;color: rgba(0, 0, 0, 0.7);opacity: 0.7}
+    .match-at-dialog{background-color: #33de47;}
+    .match-at-dialog img{width:100px;height: 54px;margin-left:10px;margin-right:10px;}
+    .match{display:inline-grid}
+    .match span{font-weight: 550;font-size: 19px;letter-spacing: 0.5px;}
+    .coupanMessage{font-size: 13px;margin-top: 15px;color: rgba(0, 0, 0, 0.6);}

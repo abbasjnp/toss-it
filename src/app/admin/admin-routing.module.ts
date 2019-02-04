@@ -9,6 +9,8 @@ import { AddFlayerComponent } from './add-flayer/add-flayer.component';
 import { GroceriesComponent } from './all-flayers/groceries/groceries.component';
 import { HomeGardensComponent } from './all-flayers/home-gardens/home-gardens.component';
 import { AddShopComponent } from './register-shop/add-shop/add-shop.component';
+import { ShopDetailsComponent } from './register-shop/shop-details/shop-details.component';
+import { ChangePasswordComponent } from './register-shop/change-password/change-password.component';
 
 const routes: Routes = [
   {
@@ -28,7 +30,9 @@ const routes: Routes = [
         ]
       },
       {path:'add-flayer',component:AddFlayerComponent},
-      {path:'add-shop',component:AddShopComponent}
+      {path:'add-shop',component:AddShopComponent},
+      {path:'register-shop/shop-details/:id',component:ShopDetailsComponent},
+      {path:'register-shop/change-password',component:ChangePasswordComponent}
     ]
     
   }

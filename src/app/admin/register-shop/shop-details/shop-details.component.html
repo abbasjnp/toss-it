@@ -1,0 +1,37 @@
+<div class="header-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="content-tagName">Dashboard / Register Shop /<span class="content-tagName-2">Shop Detail</span></div>
+        <h4>Shop Detail</h4>
+      </div>
+      <div class="col-md-8 text-right">
+        <button class="btn-add-new" type="submit" (click)="onSumbit()">Change Password</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="main-content">
+  <section>
+    <h5>Shop Detail</h5>
+    <div class="divider"></div>
+    <div class="shop-detail">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <label>Shop Name</label> <span>:</span> <span>{{shopData.shopName}}</span>
+          </div>
+          <div class="col-md-6">
+            <label>Shop Member Name </label> <span>:</span> <span>{{shopData.shopMemberName}}</span>
+          </div>
+          <div class="col-md-6">
+            <label>Email</label> <span class="email">:</span> <span>{{shopData.email}}</span>
+          </div>
+          <div class="col-md-6">
+            <label>Location(Zip Code) </label> <span class="location">:</span> <span>{{shopData.location}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

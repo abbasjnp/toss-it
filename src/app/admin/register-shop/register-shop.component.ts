@@ -1,26 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router'
-export interface PeriodicElement {
-  id:number;
-  location: string;
-  shopName: string;
-  shopMemberName:string;
-  email:string;
- 
-}
+import{AdminService} from './../admin.service'
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {id:10909,location:'M9876DKDI98', shopName: 'Fruits Shop', shopMemberName:"Abhishek Kumar",email:"abhishekumar124@gmail.com"},
-  {id:10909,location:'M9876DKDI98', shopName: 'Fruits Shop', shopMemberName:"Abhishek Kumar",email:"abhishekumar124@gmail.com"},
-  {id:10909,location:'M9876DKDI98', shopName: 'Fruits Shop', shopMemberName:"Abhishek Kumar",email:"abhishekumar124@gmail.com"},
-  {id:10909,location:'M9876DKDI98', shopName: 'Fruits Shop', shopMemberName:"Abhishek Kumar",email:"abhishekumar124@gmail.com"},
-  {id:10909,location:'M9876DKDI98', shopName: 'Fruits Shop', shopMemberName:"Abhishek Kumar",email:"abhishekumar124@gmail.com"},
-  {id:10909,location:'M9876DKDI98', shopName: 'Fruits Shop', shopMemberName:"Abhishek Kumar",email:"abhishekumar124@gmail.com"},
-  {id:10909,location:'M9876DKDI98', shopName: 'Fruits Shop', shopMemberName:"Abhishek Kumar",email:"abhishekumar124@gmail.com"},
-  {id:10909,location:'M9876DKDI98', shopName: 'Fruits Shop', shopMemberName:"Abhishek Kumar",email:"abhishekumar124@gmail.com"},
-  {id:10909,location:'M9876DKDI98', shopName: 'Fruits Shop', shopMemberName:"Abhishek Kumar",email:"abhishekumar124@gmail.com"},
-  
-];
+
+
 
 @Component({
   selector: 'app-register-shop',
@@ -28,18 +11,29 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./register-shop.component.css']
 })
 export class RegisterShopComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'location', 'shopName', 'shopMemberName','email',];
-  dataSource = ELEMENT_DATA;
+  constructor(private router:Router,private adminService:AdminService) { }
+
+  displayedColumns: string[] = ['id', 'location', 'shopName', 'shopMemberName','email','action'];
+  dataSource = this.adminService.ELEMENT_DATA
+  data;
 
   
 
-  constructor(private router:Router) { }
-
+ 
   ngOnInit() {
   }
   addNewShop(){
     this.router.navigate(['/admin/add-shop']);
     
   }
+  deleteShop(element){
+     this.data=element;
+     console.log(this.data,"ddddddddd");
+     this.router.navigate(['/admin/register-shop/shop-details',element.id]) 
+  }
+ 
+  // navigate(){
+  //   this.router.navigate(['/admin/register-shop/shop-details']) 
+  // }
 
 }

@@ -1,0 +1,51 @@
+<div class="dialog-title">
+  <h6 mat-dialog-title>Coupan Detail<span><img src="./../../../assets/img/cross.png" (click)="close()"></span></h6>
+</div>
+<div>
+  <div class="dialog-content coupan-row">
+   
+      <div class="row">
+        
+          <div class="col-6 ">
+            <div class="img-coupan">
+              <img src={{data.url}} width="250px" height="180px">
+            </div>
+          </div>
+         <div class="col-6 dialog-content-right">
+            <p>Save <br> <span>{{data.savePercentage}}</span></p>
+            <div id="coupanDetail" class="in-dialog">{{data.coupanDetail}}</div>
+            <div class="dialog-date"> Valid {{data.startDate | date}} - {{data.endDate |date}}</div>
+            <div class="match-at-dialog">
+              <img src="{{data.url}}">
+              <span class="match">Matchup at <br> <span>{{data.matchAt}}</span></span>
+            </div>
+            <p class="coupanMessage">
+              Subject to application taxex prior to coupan discount. One coupan per customer, while quanties
+              last Valid until {{data.endDate|date}}.Retailers Randome thru the regional office.
+            </p>
+            
+        </div>
+        </div>
+      
+   
+  </div>
+</div>
+<div mat-dialog-actions>
+  <!-- <button mat-button >No Thanks</button> -->
+  <!-- <button mat-button [mat-dialog-close]="add" cdkFocusInitial>Ok</button> -->
+</div>
+
+
+<!-- <div class="coupan-row">
+    <div class="coupan-column" *ngFor="let coupan of coupans" (click)="openDialog(coupan)">
+      <div id="coupan-card"  >
+        <img src={{coupan.url}} width="300px" height="200px">
+        <section>
+          <p>Save <span>{{coupan.savePercentage}}</span></p>
+          <div id="coupanDetail">{{coupan.coupanDetail}}</div>
+          <div id="matchAt">Matchup at<span> {{coupan.matchAt}}</span></div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div> -->

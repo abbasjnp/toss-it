@@ -55,11 +55,18 @@
         <ng-container matColumnDef="email">
             <th mat-header-cell *matHeaderCellDef> EMAIL ID </th>
             <td mat-cell *matCellDef="let element"> {{element.email}} </td>
-          </ng-container>
-         
-      
-      
+        </ng-container>
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef> ACTION</th>
+          <td mat-cell *matCellDef="let element">
+            <img src="./../../../assets/img/del-btn.png" (click)="deleteShop(element)" >
+            <img src="./../../../assets/img/edt-btn.png" (click)="deleteShop(element)">
+           </td>
+        </ng-container> 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
 </div>
+
+
+

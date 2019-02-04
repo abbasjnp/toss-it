@@ -11,3 +11,10 @@ td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
     border-bottom-width: 4px;
     border-bottom-style: solid;
 }
+.main-content img{
+  width: 31px;
+  height: 31px;
+  margin-right: 10px;
+  cursor: pointer;
+
+}

@@ -13,10 +13,14 @@ import { GroceriesComponent } from './all-flayers/groceries/groceries.component'
 import { HomeGardensComponent } from './all-flayers/home-gardens/home-gardens.component';
 import { AddShopComponent } from './register-shop/add-shop/add-shop.component'
 import { ReactiveFormsModule } from '@angular/forms';
+import { ShopDetailsComponent } from './register-shop/shop-details/shop-details.component';
+import { ChangePasswordComponent } from './register-shop/change-password/change-password.component';
+import {MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material'
+import { DialogComponent } from '../shared/dialog/dialog.component';
 
 @NgModule({
   declarations: [AdminComponent, UserComponent, CoupanComponent, RegisterShopComponent, AllFlayersComponent, 
-                AddFlayerComponent, GroceriesComponent, HomeGardensComponent, AddShopComponent],
+                AddFlayerComponent, GroceriesComponent, HomeGardensComponent, AddShopComponent, ShopDetailsComponent, ChangePasswordComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
@@ -24,8 +28,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppMaterialModule,
     ReactiveFormsModule
   ],
+  entryComponents: [DialogComponent],
   exports:[
-  ]
+  ],
+  providers:[{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}]
 })
 export class AdminModule { 
   constructor(){

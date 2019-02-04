@@ -6,15 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-gardens.component.css']
 })
 export class HomeGardensComponent implements OnInit {
-  values=[];
+ 
   constructor() { }
+//  hero={
+//     name:"happy",
 
+//  }
+  birthday = new Date(1988,12,10)
   ngOnInit() {
   }
-  onKey(value:any){
-    if(value)
-    this.values.push(value);
-  }
+  name ='abbas'
+  
 
  
 }
