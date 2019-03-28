@@ -13,11 +13,13 @@ import { ShopDetailsComponent } from './register-shop/shop-details/shop-details.
 import { ChangePasswordComponent } from './register-shop/change-password/change-password.component';
 
 const routes: Routes = [
+ 
   {
-    path:'',
+    path:'admin',
     component:AdminComponent,
     children:[
       {path:'user',component:UserComponent},
+     // {path:'',redirectTo:'/admin/user',pathMatch:'full'},
       {path:'coupan',component:CoupanComponent},
       {path:'register-shop',component:RegisterShopComponent},
       {path:'all-flayers',component:AllFlayersComponent,
@@ -35,7 +37,9 @@ const routes: Routes = [
       {path:'register-shop/change-password',component:ChangePasswordComponent}
     ]
     
-  }
+  },
+  {path:'',redirectTo:'/admin/user',pathMatch:'full'},
+  
 ];
 
 @NgModule({

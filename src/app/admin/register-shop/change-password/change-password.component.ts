@@ -22,6 +22,9 @@ export class ChangePasswordComponent implements OnInit {
     this.location.back();
 
   }
+  goBack(){
+    this.location.back();
+  }
 
   ngOnInit() {
   }
